@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Đấu Trường Bài</title><link rel="stylesheet" href="/style.css"></head>
+<body><div class="bg"></div><main class="app">
+<header><div class="brand"><div class="logo">♠</div><div><h1>ĐẤU TRƯỜNG BÀI</h1><small>TIẾN LÊN MIỀN NAM • ONLINE</small></div></div><div class="pill" id="connection">● Đang kết nối</div></header>
+<section id="home" class="home panel"><div class="hero"><span class="eyebrow">CHƠI CÙNG BẠN BÈ</span><h2>Mỗi lượt đánh,<br><em>một cuộc đấu trí.</em></h2><p>Tạo phòng riêng, gửi link mời và chơi Tiến Lên cùng bạn bè ở bất cứ đâu.</p></div>
+<div class="entry"><label>Tên hiển thị</label><input id="name" maxlength="18" placeholder="Nhập tên của bạn" value="Người chơi"><button id="create" class="primary">＋ Tạo phòng mới</button><div class="or">HOẶC THAM GIA PHÒNG</div><input id="code" maxlength="6" placeholder="NHẬP MÃ PHÒNG"><button id="join" class="secondary">Vào phòng →</button><p class="tiny">Chơi vui bằng điểm ảo • Không cá cược, không tiền thật</p></div></section>
+<section id="lobby" class="hidden">
+<div class="topline"><div><span class="eyebrow">PHÒNG RIÊNG</span><h2>Phòng <b id="roomCode"></b></h2></div><button id="copy" class="secondary">↗ Sao chép link mời</button></div>
+<div class="columns"><div class="panel room-panel"><div class="section-title">Người tham gia <span id="count"></span></div><div id="players" class="players"></div><div id="spectators"></div><div class="room-actions"><button id="start" class="primary">Chia bài & bắt đầu</button><p id="hostHint" class="tiny"></p></div></div>
+<div class="panel chat-panel"><div class="section-title">Trò chuyện</div><div id="messages" class="messages"></div><form id="chatForm"><input id="chatInput" maxlength="250" placeholder="Nhắn gì đó..."><button>➤</button></form></div></div>
+</section>
+<section id="game" class="hidden">
+<div class="gamebar"><div><span class="eyebrow">PHÒNG <b id="gameCode"></b></span><h2>Tiến lên miền Nam</h2></div><button id="copy2" class="secondary">Mời bạn bè ↗</button></div>
+<div class="table panel"><div id="seatList" class="seat-list"></div><div class="center-play"><div class="turn-label" id="turnLabel">Đang chờ...</div><div id="played" class="played"></div><div id="feed" class="feed"></div></div></div>
+<div class="hand-area"><div class="hand-head"><span>BÀI CỦA BẠN</span><span id="handCount"></span></div><div id="hand" class="hand"></div><div class="actions"><button id="pass" class="secondary">Bỏ lượt</button><button id="play" class="primary">Đánh bài</button><button id="newRound" class="secondary hidden">Ván mới</button></div></div>
+<div class="panel chat-inline"><div id="gameMessages" class="messages"></div><form id="gameChatForm"><input id="gameChatInput" maxlength="250" placeholder="Chat với mọi người..."><button>➤</button></form></div>
+</section>
+<div id="toast" class="toast"></div><footer>ĐẤU TRƯỜNG BÀI <span>•</span> PHIÊN BẢN BETA</footer></main><script src="/socket.io/socket.io.js"></script><script src="/app.js"></script></body></html>
