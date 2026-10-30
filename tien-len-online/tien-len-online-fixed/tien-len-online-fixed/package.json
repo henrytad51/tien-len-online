@@ -1,0 +1,15 @@
+{
+  "name": "tien-len-online",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Multiplayer Tien Len Mien Nam card game",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "socket.io": "^4.8.1"
+  }
+}
